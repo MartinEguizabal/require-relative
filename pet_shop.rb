@@ -32,13 +32,20 @@
 #   return amount.total()
 # end
 
-def stock_count(pets)
-  total = 0
-for pet in pets
-  total += pet[:pets]
+# def stock_count(pet_shop)
+#   return pet_shop[:pets].count()
+# end
+
+Brit_short = []
+def pets_by_breed(shop, breed)
+  for pet in shop[:pets]
+    if pet[:breed] == breed
+      Brit_short << breed
+    end
+  end
+  return Brit_short
 end
 
-return total
 
 
 
