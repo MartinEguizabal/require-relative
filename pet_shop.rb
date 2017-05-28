@@ -7,9 +7,10 @@
 # end
 
 # def add_or_remove_cash(pet_shop, cash)
-#   pet_shop[:admin][:total_cash] = 1010
+#   result = pet_shop[:admin][:total_cash] + cash
+#   pet_shop[:admin][:total_cash] = result
 #   return pet_shop[:admin][:total_cash]
-# end 
+# end
 
 # def add_or_remove_cash(pet_shop, cash)
 #   result = pet_shop[:admin][:total_cash] + cash
@@ -36,14 +37,61 @@
 #   return pet_shop[:pets].count()
 # end
 
-Brit_short = []
-def pets_by_breed(shop, breed)
+# All_pets_by_breed = []
+# def pets_by_breed(shop, breed)
+
+#   for pet in shop[:pets]
+#     if pet[:breed] == breed
+#       Brit_short << breed
+#     end
+#   end
+#   return All_pets_by_breed
+# end
+
+# All_pets_by_breed = []
+# def pets_by_breed(shop, breed)
+  
+#   for pet in shop[:pets]
+#     if pet[:breed] == breed
+#       Breed_dal << breed
+#     end
+#   end
+#   return All_pets_by_breed
+# end
+
+# pet_name = []
+# def find_pet_by_name(shop, name)
+  
+#   for pet in shop[:pets]
+#     if pet[:name] == name
+#       pet_name << shop[:pets].index(:name)
+#     end
+#   end
+#   return pet_name
+# end
+
+
+# def find_pet_by_name(shop, name)
+#   for pet in shop[:pets]
+#     if pet[:name] == "Fred"
+#       puts "it's Fred, this is impossible!"
+#     else
+#       return nil
+#     end
+#   end
+# end
+
+def remove_pet_by_name(shop, name)
   for pet in shop[:pets]
-    if pet[:breed] == breed
-      Brit_short << breed
+    if pet[:name] == name
+      shop[:pets].shift(name)
+    end
+    if pet[:name] == "Arthur"
+      puts "it's Arthur, this is impossible!"
+    else
+      return nil
     end
   end
-  return Brit_short
 end
 
 
