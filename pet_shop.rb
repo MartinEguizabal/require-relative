@@ -81,17 +81,22 @@
 #   end
 # end
 
-def remove_pet_by_name(shop, name)
-  for pet in shop[:pets]
-    if pet[:name] == name
-      shop[:pets].shift(name)
-    end
-    if pet[:name] == "Arthur"
-      puts "it's Arthur, this is impossible!"
-    else
-      return nil
-    end
-  end
+# def remove_pet_by_name(shop, name)
+#   for pet in shop[:pets]
+#     if pet[:name] == name
+#       shop[:pets].shift(name)
+#     end
+#     if pet[:name] == "Arthur"
+#       puts "it's Arthur, this is impossible!"
+#     else
+#       return nil
+#     end
+#   end
+# end
+
+def add_pet_to_stock(shop, pet)
+  shop[:pets] << pet
+  return shop[:pets].count()
 end
 
 
