@@ -99,8 +99,13 @@
 #   return shop[:pets].count()
 # end
 
-def customer_pet_count(customer)
-  customer[:pets] = 0
+# def customer_pet_count(customer)
+#   customer[:pets] = 0
+#   return customer[:pets]
+# end
+
+def add_pet_to_customer(customer, pet)
+  customer[:pets] = 1
   return customer[:pets]
 end
 
