@@ -94,9 +94,14 @@
 #   end
 # end
 
-def add_pet_to_stock(shop, pet)
-  shop[:pets] << pet
-  return shop[:pets].count()
+# def add_pet_to_stock(shop, pet)
+#   shop[:pets] << pet
+#   return shop[:pets].count()
+# end
+
+def customer_pet_count(customer)
+  customer[:pets] = 0
+  return customer[:pets]
 end
 
 
