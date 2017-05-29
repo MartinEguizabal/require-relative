@@ -104,10 +104,49 @@
 #   return customer[:pets]
 # end
 
-def add_pet_to_customer(customer, pet)
+# def add_pet_to_customer(customer, pet)
+#   customer[:pets] = 1
+#   return customer[:pets]
+# end
+
+# def customer_can_afford_pet(customer, pet)
+#   pet_cost = pet[:price]
+#   if customer[:cash] >= pet_cost
+#     can_buy_pet = true
+#   else
+#     can_buy_pet = false
+#   end
+# end
+
+def sell_pet_to_customer(shop, pet, customer)
+
+def find_pet_by_name(shop, pet)
+  for pet in shop[:pets]
+    if pet[:name] == "Arthur"
+      puts "it's Arthur, this is impossible!"
+    else
+      return nil
+    end
+  end
+end
+
+def customer_can_afford_pet(customer, pet)
+  pet_cost = pet[:price]
+  if customer[:cash] >= pet_cost
+    can_buy_pet = true
+  else
+    can_buy_pet = false
+  end
+end
+
+def customer_pet_count(customer)
   customer[:pets] = 1
   return customer[:pets]
 end
+
+end
+
+
 
 
 
